@@ -159,6 +159,8 @@
 		B389970B1BC357F9002E7CE8 /* XMPPMessage+XEP_0308.m in Sources */ = {isa = PBXBuildFile; fileRef = B38996A41BC357F9002E7CE8 /* XMPPMessage+XEP_0308.m */; settings = {ASSET_TAGS = (); }; };
 		B389970C1BC357F9002E7CE8 /* XMPPMessage+XEP_0333.m in Sources */ = {isa = PBXBuildFile; fileRef = B38996A71BC357F9002E7CE8 /* XMPPMessage+XEP_0333.m */; settings = {ASSET_TAGS = (); }; };
 		B389970D1BC357F9002E7CE8 /* NSXMLElement+XEP_0335.m in Sources */ = {isa = PBXBuildFile; fileRef = B38996AA1BC357F9002E7CE8 /* NSXMLElement+XEP_0335.m */; settings = {ASSET_TAGS = (); }; };
+		B3C87EE21BC3718C00BA173C /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B3C87EE11BC3718C00BA173C /* Login.storyboard */; settings = {ASSET_TAGS = (); }; };
+		B3C87EE61BC4B34A00BA173C /* WCLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B3C87EE51BC4B34A00BA173C /* WCLoginViewController.m */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -492,6 +494,9 @@
 		B38996A91BC357F9002E7CE8 /* NSXMLElement+XEP_0335.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSXMLElement+XEP_0335.h"; sourceTree = "<group>"; };
 		B38996AA1BC357F9002E7CE8 /* NSXMLElement+XEP_0335.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSXMLElement+XEP_0335.m"; sourceTree = "<group>"; };
 		B389970E1BC3581A002E7CE8 /* XMPPFramework.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XMPPFramework.h; sourceTree = "<group>"; };
+		B3C87EE11BC3718C00BA173C /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
+		B3C87EE41BC4B34A00BA173C /* WCLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WCLoginViewController.h; sourceTree = "<group>"; };
+		B3C87EE51BC4B34A00BA173C /* WCLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WCLoginViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -548,8 +553,6 @@
 			isa = PBXGroup;
 			children = (
 				B38995071BC353D5002E7CE8 /* Classes */,
-				B38994D71BC353A5002E7CE8 /* AppDelegate.h */,
-				B38994D81BC353A5002E7CE8 /* AppDelegate.m */,
 				B38994DA1BC353A5002E7CE8 /* ViewController.h */,
 				B38994DB1BC353A5002E7CE8 /* ViewController.m */,
 				B38994DD1BC353A5002E7CE8 /* Main.storyboard */,
@@ -590,6 +593,9 @@
 		B38995071BC353D5002E7CE8 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				B3C87EE01BC3717300BA173C /* Main */,
+				B3C87EDF1BC3716D00BA173C /* Login */,
+				B3C87EDE1BC35F3F00BA173C /* Other */,
 				B38995081BC353EC002E7CE8 /* Lib */,
 			);
 			name = Classes;
@@ -1481,6 +1487,40 @@
 			path = "XEP-0335";
 			sourceTree = "<group>";
 		};
+		B3C87EDE1BC35F3F00BA173C /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				B38994D71BC353A5002E7CE8 /* AppDelegate.h */,
+				B38994D81BC353A5002E7CE8 /* AppDelegate.m */,
+			);
+			name = Other;
+			sourceTree = "<group>";
+		};
+		B3C87EDF1BC3716D00BA173C /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				B3C87EE31BC4B32300BA173C /* Controller */,
+				B3C87EE11BC3718C00BA173C /* Login.storyboard */,
+			);
+			name = Login;
+			sourceTree = "<group>";
+		};
+		B3C87EE01BC3717300BA173C /* Main */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Main;
+			sourceTree = "<group>";
+		};
+		B3C87EE31BC4B32300BA173C /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				B3C87EE41BC4B34A00BA173C /* WCLoginViewController.h */,
+				B3C87EE51BC4B34A00BA173C /* WCLoginViewController.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1543,6 +1583,7 @@
 		B38994C91BC353A5002E7CE8 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = WC;
 				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = leo;
 				TargetAttributes = {
@@ -1589,6 +1630,7 @@
 			files = (
 				B38995441BC35739002E7CE8 /* build-libidn.sh in Resources */,
 				B38994E41BC353A5002E7CE8 /* LaunchScreen.storyboard in Resources */,
+				B3C87EE21BC3718C00BA173C /* Login.storyboard in Resources */,
 				B38994E11BC353A5002E7CE8 /* Assets.xcassets in Resources */,
 				B38995271BC35619002E7CE8 /* README.txt in Resources */,
 				B38994DF1BC353A5002E7CE8 /* Main.storyboard in Resources */,
@@ -1721,6 +1763,7 @@
 				B38996CA1BC357F9002E7CE8 /* XMPPRoomOccupantHybridMemoryStorageObject.m in Sources */,
 				B38996CF1BC357F9002E7CE8 /* XMPPMUC.m in Sources */,
 				B38996DD1BC357F9002E7CE8 /* XMPPvCardTempTel.m in Sources */,
+				B3C87EE61BC4B34A00BA173C /* WCLoginViewController.m in Sources */,
 				B38996FF1BC357F9002E7CE8 /* XMPPStreamManagement.m in Sources */,
 				B38995A01BC35796002E7CE8 /* XMPPStream.m in Sources */,
 				B38996F71BC357F9002E7CE8 /* XMPPvCardAvatarModule.m in Sources */,
@@ -1906,6 +1949,7 @@
 				OTHER_LDFLAGS = "-lxml2";
 				PRODUCT_BUNDLE_IDENTIFIER = com.leo.WeChat;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -1923,6 +1967,7 @@
 				OTHER_LDFLAGS = "-lxml2";
 				PRODUCT_BUNDLE_IDENTIFIER = com.leo.WeChat;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
@@ -1993,6 +2038,7 @@
 				B38995001BC353A5002E7CE8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B38995011BC353A5002E7CE8 /* Build configuration list for PBXNativeTarget "WeChatTests" */ = {
 			isa = XCConfigurationList;
@@ -2001,6 +2047,7 @@
 				B38995031BC353A5002E7CE8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B38995041BC353A5002E7CE8 /* Build configuration list for PBXNativeTarget "WeChatUITests" */ = {
 			isa = XCConfigurationList;
@@ -2009,6 +2056,7 @@
 				B38995061BC353A5002E7CE8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
