@@ -19,6 +19,7 @@
 
 #import "AppDelegate.h"
 #import "XMPPFramework.h"
+#import "WeChat-Prefix.pch"
 
 @interface AppDelegate () <XMPPStreamDelegate> {
     
@@ -49,6 +50,16 @@
  */
 - (void)sendOnline;
 
+/**
+ *  发送"离线"消息
+ */
+- (void)sendOffline;
+
+/**
+ *  与服务器断开连接
+ */
+- (void)disconnectFromHost;
+
 @end
 
 @implementation AppDelegate
@@ -58,6 +69,13 @@
     
 //    [self setupStream];
 //    [self connectToHost];
+    
+    // 判断用户是否登录
+    if ([WCAccount shareAccount].isLogin) {
+        // 来界面
+        id mainVc = [[UIStoryboard storyboardWithName:@"Main" bundle:nil]instantiateInitialViewController];
+        self.window.rootViewController = mainVc;
+    }
     
     return YES;
 }
@@ -81,7 +99,7 @@
     // 1.设置用户的jid
     // resource 用户登录客户端设备的类型
     
-    NSString *user = [[NSUserDefaults standardUserDefaults] objectForKey:@"user"];
+    NSString *user = [WCAccount shareAccount].user;
     
     XMPPJID *myjid = [XMPPJID jidWithUser:user domain:@"127.0.0.1" resource:@"iphone6P"];
     _xmppStream.myJID = myjid;
@@ -105,7 +123,7 @@
 
 - (void)sendPwdToHost {
     NSError *error = nil;
-    NSString *pwd = [[NSUserDefaults standardUserDefaults] objectForKey:@"pwd"];
+    NSString *pwd = [WCAccount shareAccount].pwd;
     [_xmppStream authenticateWithPassword:pwd error:&error];
     if (error) {
         NSLog(@"%@",error);
@@ -117,6 +135,16 @@
     XMPPPresence *presence = [XMPPPresence presence];
     NSLog(@"%@",presence);
     [_xmppStream sendElement:presence];
+}
+
+- (void)sendOffline {
+    
+    XMPPPresence *offline = [XMPPPresence presenceWithType:@"unavailable"];
+    [_xmppStream sendElement:offline];
+}
+
+- (void)disconnectFromHost {
+    [_xmppStream disconnect];
 }
 
 
@@ -153,11 +181,25 @@
 
 #pragma mark - 用户登录
 - (void)xmppLogin:(XMPPResultBlock)resultBlock {
+    
+    // 不管什么情况，把以前的连接断开
+    [_xmppStream disconnect];
+    
     // 保存resultBlock
     _resultBlock = resultBlock;
     
     // 连接服务器开始登录的操作
     [self connectToHost];
+}
+
+#pragma mark - 用户注销
+- (void)xmppLogout {
+    // 注销
+    // 1.发送"离线消息"给服务器
+    [self sendOffline];
+    
+    // 2.断开连接
+    [self disconnectFromHost];
 }
 
 @end

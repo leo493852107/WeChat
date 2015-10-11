@@ -8,6 +8,7 @@
 
 #import "WCLoginViewController.h"
 #import "AppDelegate.h"
+#import "MBProgressHUD+HM.h"
 
 @interface WCLoginViewController ()
 
@@ -47,12 +48,19 @@
         return;
     }
     
+    // 给用户提示
+    [MBProgressHUD showMessage:@"正在登陆..."];
+    
     // 2.登录服务器
     // 2.1把用户名和密码保存到沙盒
-    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    [defaults setObject:self.userField.text forKey:@"user"];
-    [defaults setObject:self.pwdField.text forKey:@"pwd"];
-    [defaults synchronize];
+//    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+//    [defaults setObject:self.userField.text forKey:@"user"];
+//    [defaults setObject:self.pwdField.text forKey:@"pwd"];
+//    [defaults synchronize];
+    
+    // 2.1把用户和密码放在Account单例
+    [WCAccount shareAccount].user = self.userField.text;
+    [WCAccount shareAccount].pwd = self.pwdField.text;
     
     // 2.2调用AppDelegate的xmppLogin方法
     
@@ -65,34 +73,54 @@
     __weak typeof(self) selfVc = self;
     AppDelegate *appDelegate = [UIApplication sharedApplication].delegate;
     [appDelegate xmppLogin:^(XMPPResultType resultType) {
+        [selfVc handleXMPPResultType:resultType];
         
+    }];
+   
+}
+
+#pragma mark - 处理结果
+- (void)handleXMPPResultType:(XMPPResultType)resultType {
+    
+    // 回到主线程更新UI
+    dispatch_async(dispatch_get_main_queue(), ^{
+        
+        [MBProgressHUD hideHUD];
         if (resultType == XMPPResultTypeLoginSuccess) {
             NSLog(@"%s 登录成功",__func__);
             
-             // 3.登录成功切换到主界面
-            [selfVc changeToMain];
+            // 3.登录成功切换到主界面
+            [UIStoryboard showInitialVCWithName:@"Main"];
+            
+            // 设置当前登录状态
+            [WCAccount shareAccount].login = YES;
+            
+            // 保存登录账户信息到沙盒
+            [[WCAccount shareAccount] saveToSandBox];
+            
         } else {
             NSLog(@"%s 登录失败",__func__);
+            [MBProgressHUD showError:@"用户名或密码错误"];
         }
-    }];
-   
+    });
+    
 }
 
 - (void)dealloc {
     NSLog(@"%s",__func__);
 }
 
-- (void)changeToMain {
-    // 回到主线程更新UI
-    dispatch_async(dispatch_get_main_queue(), ^{
-        // 1.获取Main.storyboard的第一个控制器
-        id vc = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateInitialViewController];
-        
-        // 2.切换window的根控制器
-        [UIApplication sharedApplication].keyWindow.rootViewController = vc;
-        
-    });
-}
+//#pragma mark - 切换到主界面
+//- (void)changeToMain {
+//    
+//    // 1.获取Main.storyboard的第一个控制器
+//    id vc = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateInitialViewController];
+//    
+//    // 2.切换window的根控制器
+//    [UIApplication sharedApplication].keyWindow.rootViewController = vc;
+//    
+//    
+//}
 
 
 @end

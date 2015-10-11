@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "WeChat-Prefix.pch"
 
 @interface WCLoginViewController : UIViewController
 
