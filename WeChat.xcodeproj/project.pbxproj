@@ -166,6 +166,8 @@
 		B3C68FA11BC7E99C003BA1D0 /* WCMeTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B3C68FA01BC7E99C003BA1D0 /* WCMeTableViewController.m */; settings = {ASSET_TAGS = (); }; };
 		B3C87EE21BC3718C00BA173C /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B3C87EE11BC3718C00BA173C /* Login.storyboard */; settings = {ASSET_TAGS = (); }; };
 		B3C87EE61BC4B34A00BA173C /* WCLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B3C87EE51BC4B34A00BA173C /* WCLoginViewController.m */; settings = {ASSET_TAGS = (); }; };
+		B3CE3CF11BCB965E007CAF12 /* WCRegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B3CE3CF01BCB965E007CAF12 /* WCRegisterViewController.m */; settings = {ASSET_TAGS = (); }; };
+		B3CE3CF51BCB98A5007CAF12 /* WCXMPPTool.m in Sources */ = {isa = PBXBuildFile; fileRef = B3CE3CF41BCB98A5007CAF12 /* WCXMPPTool.m */; settings = {ASSET_TAGS = (); }; };
 		B3EC886E1BCA4BAA0043B6E1 /* UIButton+WF.m in Sources */ = {isa = PBXBuildFile; fileRef = B3EC88631BCA4BAA0043B6E1 /* UIButton+WF.m */; settings = {ASSET_TAGS = (); }; };
 		B3EC886F1BCA4BAA0043B6E1 /* UIImage+WF.m in Sources */ = {isa = PBXBuildFile; fileRef = B3EC88651BCA4BAA0043B6E1 /* UIImage+WF.m */; settings = {ASSET_TAGS = (); }; };
 		B3EC88701BCA4BAA0043B6E1 /* UIScreen+WF.m in Sources */ = {isa = PBXBuildFile; fileRef = B3EC88671BCA4BAA0043B6E1 /* UIScreen+WF.m */; settings = {ASSET_TAGS = (); }; };
@@ -518,6 +520,11 @@
 		B3C87EE11BC3718C00BA173C /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		B3C87EE41BC4B34A00BA173C /* WCLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WCLoginViewController.h; sourceTree = "<group>"; };
 		B3C87EE51BC4B34A00BA173C /* WCLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WCLoginViewController.m; sourceTree = "<group>"; };
+		B3CE3CEF1BCB965E007CAF12 /* WCRegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WCRegisterViewController.h; sourceTree = "<group>"; };
+		B3CE3CF01BCB965E007CAF12 /* WCRegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WCRegisterViewController.m; sourceTree = "<group>"; };
+		B3CE3CF31BCB98A5007CAF12 /* WCXMPPTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WCXMPPTool.h; sourceTree = "<group>"; };
+		B3CE3CF41BCB98A5007CAF12 /* WCXMPPTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WCXMPPTool.m; sourceTree = "<group>"; };
+		B3CE3CF61BCB9A86007CAF12 /* Singleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Singleton.h; sourceTree = "<group>"; };
 		B3EC88611BCA4BAA0043B6E1 /* CategoryWF.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategoryWF.h; sourceTree = "<group>"; };
 		B3EC88621BCA4BAA0043B6E1 /* UIButton+WF.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+WF.h"; sourceTree = "<group>"; };
 		B3EC88631BCA4BAA0043B6E1 /* UIButton+WF.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+WF.m"; sourceTree = "<group>"; };
@@ -1583,6 +1590,7 @@
 		B3C87EE01BC3717300BA173C /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				B3CE3CF21BCB9886007CAF12 /* Tool */,
 				B38994DD1BC353A5002E7CE8 /* Main.storyboard */,
 				B3C68F981BC696D0003BA1D0 /* Model */,
 			);
@@ -1594,8 +1602,20 @@
 			children = (
 				B3C87EE41BC4B34A00BA173C /* WCLoginViewController.h */,
 				B3C87EE51BC4B34A00BA173C /* WCLoginViewController.m */,
+				B3CE3CEF1BCB965E007CAF12 /* WCRegisterViewController.h */,
+				B3CE3CF01BCB965E007CAF12 /* WCRegisterViewController.m */,
 			);
 			name = Controller;
+			sourceTree = "<group>";
+		};
+		B3CE3CF21BCB9886007CAF12 /* Tool */ = {
+			isa = PBXGroup;
+			children = (
+				B3CE3CF61BCB9A86007CAF12 /* Singleton.h */,
+				B3CE3CF31BCB98A5007CAF12 /* WCXMPPTool.h */,
+				B3CE3CF41BCB98A5007CAF12 /* WCXMPPTool.m */,
+			);
+			name = Tool;
 			sourceTree = "<group>";
 		};
 		B3EC88601BCA4BAA0043B6E1 /* Category */ = {
@@ -1773,6 +1793,7 @@
 				B38996BF1BC357F9002E7CE8 /* XMPPJabberRPCModule.m in Sources */,
 				B3C68F9B1BC696EA003BA1D0 /* WCAccount.m in Sources */,
 				B38996E41BC357F9002E7CE8 /* XMPPMessage+XEP_0066.m in Sources */,
+				B3CE3CF11BCB965E007CAF12 /* WCRegisterViewController.m in Sources */,
 				B38996E11BC357F9002E7CE8 /* XMPPPubSub.m in Sources */,
 				B38996AC1BC357F9002E7CE8 /* XMPPCoreDataStorage.m in Sources */,
 				B38996AB1BC357F9002E7CE8 /* XMPPBandwidthMonitor.m in Sources */,
@@ -1865,6 +1886,7 @@
 				B38996D11BC357F9002E7CE8 /* XMPPvCard.xcdatamodeld in Sources */,
 				B38995261BC35619002E7CE8 /* DDMultiFormatter.m in Sources */,
 				B38996EF1BC357F9002E7CE8 /* XMPPCapsResourceCoreDataStorageObject.m in Sources */,
+				B3CE3CF51BCB98A5007CAF12 /* WCXMPPTool.m in Sources */,
 				B38996CA1BC357F9002E7CE8 /* XMPPRoomOccupantHybridMemoryStorageObject.m in Sources */,
 				B38996CF1BC357F9002E7CE8 /* XMPPMUC.m in Sources */,
 				B38996DD1BC357F9002E7CE8 /* XMPPvCardTempTel.m in Sources */,

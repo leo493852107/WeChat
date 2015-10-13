@@ -59,8 +59,8 @@
 //    [defaults synchronize];
     
     // 2.1把用户和密码放在Account单例
-    [WCAccount shareAccount].user = self.userField.text;
-    [WCAccount shareAccount].pwd = self.pwdField.text;
+    [WCAccount shareAccount].loginUser = self.userField.text;
+    [WCAccount shareAccount].loginPwd = self.pwdField.text;
     
     // 2.2调用AppDelegate的xmppLogin方法
     
@@ -71,8 +71,10 @@
     
     // block会对self进行强引用
     __weak typeof(self) selfVc = self;
-    AppDelegate *appDelegate = [UIApplication sharedApplication].delegate;
-    [appDelegate xmppLogin:^(XMPPResultType resultType) {
+    
+    // 设置标识
+    [WCXMPPTool sharedWCXMPPTool].registerOperation = NO;
+    [[WCXMPPTool sharedWCXMPPTool] xmppLogin:^(XMPPResultType resultType) {
         [selfVc handleXMPPResultType:resultType];
         
     }];

@@ -99,9 +99,7 @@
 - (IBAction)logoutBtnClick:(id)sender {
     
     // 注销
-    // 1.发送"离线消息"给服务器
-    AppDelegate *appDelegate = [UIApplication sharedApplication].delegate;
-    [appDelegate xmppLogout];
+    [[WCXMPPTool sharedWCXMPPTool] xmppLogout];
     
     // 注销的时候，要把沙盒登录状态设置为NO
     [WCAccount shareAccount].login = NO;

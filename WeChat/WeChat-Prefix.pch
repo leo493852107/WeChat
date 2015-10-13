@@ -14,5 +14,7 @@
 
 #import "WCAccount.h"
 #import "CategoryWF.h"
+#import "WCXMPPTool.h"
+#import "MBProgressHUD+HM.h"
 
 #endif /* WeChat_Prefix_pch */
