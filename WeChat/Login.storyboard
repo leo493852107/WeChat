@@ -130,7 +130,7 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="注册" id="zef-T8-W81">
-                        <barButtonItem key="leftBarButtonItem" title="取消" id="HAy-Sp-VL3">
+                        <barButtonItem key="leftBarButtonItem" title="返回" id="HAy-Sp-VL3">
                             <connections>
                                 <action selector="cancelBtnClick:" destination="zDI-VA-5aG" id="JGG-rO-vQF"/>
                             </connections>

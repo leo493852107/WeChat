@@ -42,6 +42,7 @@
 */
 
 - (IBAction)cancelBtnClick:(id)sender {
+    [UIStoryboard showInitialVCWithName:@"Login"];
 }
 
 - (IBAction)registerBtnClick:(id)sender {

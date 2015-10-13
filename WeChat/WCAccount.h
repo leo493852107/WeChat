@@ -35,4 +35,19 @@
  */
 - (void)saveToSandBox;
 
+/**
+ *  服务器的域名
+ */
+@property (nonatomic, copy, readonly) NSString *domain;
+
+/**
+ *  服务器的IP
+ */
+@property (nonatomic, copy, readonly) NSString *host;
+
+/**
+ *  服务器的端口
+ */
+@property (nonatomic, assign, readonly) int port;
+
 @end

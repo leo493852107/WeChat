@@ -12,6 +12,10 @@
 #define kPwdKey @"pwd"
 #define kLoginKey @"login"
 
+static NSString *domain = @"127.0.0.1";
+static NSString *host = @"127.0.0.1";
+static int port = 5222;
+
 @implementation WCAccount
 
 
@@ -52,6 +56,18 @@
     [defaults setBool:self.isLogin forKey:kLoginKey];
     [defaults synchronize];
     
+}
+
+- (NSString *)domain {
+    return domain;
+}
+
+- (NSString *)host {
+    return host;
+}
+
+- (int)port {
+    return port;
 }
 
 @end
