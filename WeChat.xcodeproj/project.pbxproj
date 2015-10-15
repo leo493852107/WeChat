@@ -930,13 +930,13 @@
 				B38995B91BC357F9002E7CE8 /* GoogleSharedStatus */,
 				B38995BC1BC357F9002E7CE8 /* ProcessOne */,
 				B38995BF1BC357F9002E7CE8 /* Reconnect */,
-				B38995C21BC357F9002E7CE8 /* Roster */,
+				B38995C21BC357F9002E7CE8 /* Roster[好友列表] */,
 				B38995DA1BC357F9002E7CE8 /* SystemInputActivityMonitor */,
 				B38995DD1BC357F9002E7CE8 /* XEP-0009 */,
 				B38995E41BC357F9002E7CE8 /* XEP-0012 */,
 				B38995E91BC357F9002E7CE8 /* XEP-0016 */,
 				B38995EC1BC357F9002E7CE8 /* XEP-0045 */,
-				B38996101BC357F9002E7CE8 /* XEP-0054 */,
+				B38996101BC357F9002E7CE8 /* XEP-0054[电子名片] */,
 				B389962C1BC357F9002E7CE8 /* XEP-0059 */,
 				B38996311BC357F9002E7CE8 /* XEP-0060 */,
 				B38996361BC357F9002E7CE8 /* XEP-0065 */,
@@ -1028,7 +1028,7 @@
 			path = Reconnect;
 			sourceTree = "<group>";
 		};
-		B38995C21BC357F9002E7CE8 /* Roster */ = {
+		B38995C21BC357F9002E7CE8 /* Roster[好友列表] */ = {
 			isa = PBXGroup;
 			children = (
 				B38995C31BC357F9002E7CE8 /* CoreDataStorage */,
@@ -1039,6 +1039,7 @@
 				B38995D81BC357F9002E7CE8 /* XMPPRosterPrivate.h */,
 				B38995D91BC357F9002E7CE8 /* XMPPUser.h */,
 			);
+			name = "Roster[好友列表]";
 			path = Roster;
 			sourceTree = "<group>";
 		};
@@ -1175,7 +1176,7 @@
 			path = MemoryStorage;
 			sourceTree = "<group>";
 		};
-		B38996101BC357F9002E7CE8 /* XEP-0054 */ = {
+		B38996101BC357F9002E7CE8 /* XEP-0054[电子名片] */ = {
 			isa = PBXGroup;
 			children = (
 				B38996111BC357F9002E7CE8 /* CoreDataStorage */,
@@ -1196,6 +1197,7 @@
 				B389962A1BC357F9002E7CE8 /* XMPPvCardTempTel.h */,
 				B389962B1BC357F9002E7CE8 /* XMPPvCardTempTel.m */,
 			);
+			name = "XEP-0054[电子名片]";
 			path = "XEP-0054";
 			sourceTree = "<group>";
 		};
