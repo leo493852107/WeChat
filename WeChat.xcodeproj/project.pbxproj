@@ -168,6 +168,8 @@
 		B3C87EE61BC4B34A00BA173C /* WCLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B3C87EE51BC4B34A00BA173C /* WCLoginViewController.m */; settings = {ASSET_TAGS = (); }; };
 		B3CE3CF11BCB965E007CAF12 /* WCRegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B3CE3CF01BCB965E007CAF12 /* WCRegisterViewController.m */; settings = {ASSET_TAGS = (); }; };
 		B3CE3CF51BCB98A5007CAF12 /* WCXMPPTool.m in Sources */ = {isa = PBXBuildFile; fileRef = B3CE3CF41BCB98A5007CAF12 /* WCXMPPTool.m */; settings = {ASSET_TAGS = (); }; };
+		B3CE3CF91BCE2454007CAF12 /* WCProfileTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B3CE3CF81BCE2454007CAF12 /* WCProfileTableViewController.m */; settings = {ASSET_TAGS = (); }; };
+		B3CE3CFC1BCF8DE4007CAF12 /* WCEditVCardTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B3CE3CFB1BCF8DE4007CAF12 /* WCEditVCardTableViewController.m */; settings = {ASSET_TAGS = (); }; };
 		B3EC886E1BCA4BAA0043B6E1 /* UIButton+WF.m in Sources */ = {isa = PBXBuildFile; fileRef = B3EC88631BCA4BAA0043B6E1 /* UIButton+WF.m */; settings = {ASSET_TAGS = (); }; };
 		B3EC886F1BCA4BAA0043B6E1 /* UIImage+WF.m in Sources */ = {isa = PBXBuildFile; fileRef = B3EC88651BCA4BAA0043B6E1 /* UIImage+WF.m */; settings = {ASSET_TAGS = (); }; };
 		B3EC88701BCA4BAA0043B6E1 /* UIScreen+WF.m in Sources */ = {isa = PBXBuildFile; fileRef = B3EC88671BCA4BAA0043B6E1 /* UIScreen+WF.m */; settings = {ASSET_TAGS = (); }; };
@@ -525,6 +527,10 @@
 		B3CE3CF31BCB98A5007CAF12 /* WCXMPPTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WCXMPPTool.h; sourceTree = "<group>"; };
 		B3CE3CF41BCB98A5007CAF12 /* WCXMPPTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WCXMPPTool.m; sourceTree = "<group>"; };
 		B3CE3CF61BCB9A86007CAF12 /* Singleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Singleton.h; sourceTree = "<group>"; };
+		B3CE3CF71BCE2454007CAF12 /* WCProfileTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WCProfileTableViewController.h; sourceTree = "<group>"; };
+		B3CE3CF81BCE2454007CAF12 /* WCProfileTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WCProfileTableViewController.m; sourceTree = "<group>"; };
+		B3CE3CFA1BCF8DE4007CAF12 /* WCEditVCardTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WCEditVCardTableViewController.h; sourceTree = "<group>"; };
+		B3CE3CFB1BCF8DE4007CAF12 /* WCEditVCardTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WCEditVCardTableViewController.m; sourceTree = "<group>"; };
 		B3EC88611BCA4BAA0043B6E1 /* CategoryWF.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategoryWF.h; sourceTree = "<group>"; };
 		B3EC88621BCA4BAA0043B6E1 /* UIButton+WF.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+WF.h"; sourceTree = "<group>"; };
 		B3EC88631BCA4BAA0043B6E1 /* UIButton+WF.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+WF.m"; sourceTree = "<group>"; };
@@ -1565,6 +1571,10 @@
 			children = (
 				B3C68F9F1BC7E99C003BA1D0 /* WCMeTableViewController.h */,
 				B3C68FA01BC7E99C003BA1D0 /* WCMeTableViewController.m */,
+				B3CE3CF71BCE2454007CAF12 /* WCProfileTableViewController.h */,
+				B3CE3CF81BCE2454007CAF12 /* WCProfileTableViewController.m */,
+				B3CE3CFA1BCF8DE4007CAF12 /* WCEditVCardTableViewController.h */,
+				B3CE3CFB1BCF8DE4007CAF12 /* WCEditVCardTableViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -1898,6 +1908,7 @@
 				B38996B31BC357F9002E7CE8 /* XMPPGroupCoreDataStorageObject.m in Sources */,
 				B38996EB1BC357F9002E7CE8 /* NSString+XEP_0106.m in Sources */,
 				B38996F11BC357F9002E7CE8 /* XMPPMessageArchiving.xcdatamodeld in Sources */,
+				B3CE3CFC1BCF8DE4007CAF12 /* WCEditVCardTableViewController.m in Sources */,
 				B38995941BC35796002E7CE8 /* XMPPXOAuth2Google.m in Sources */,
 				B3EC88711BCA4BAA0043B6E1 /* UIStoryboard+WF.m in Sources */,
 				B38996CB1BC357F9002E7CE8 /* XMPPRoomMemoryStorage.m in Sources */,
@@ -1923,6 +1934,7 @@
 				B38995201BC35619002E7CE8 /* DDASLLogger.m in Sources */,
 				B38995A61BC35796002E7CE8 /* XMPPStringPrep.m in Sources */,
 				B389958D1BC35796002E7CE8 /* XMPPAnonymousAuthentication.m in Sources */,
+				B3CE3CF91BCE2454007CAF12 /* WCProfileTableViewController.m in Sources */,
 				B38996E91BC357F9002E7CE8 /* XMPPSoftwareVersion.m in Sources */,
 				B38996F91BC357F9002E7CE8 /* XMPPPresence+XEP_0172.m in Sources */,
 				B38996EA1BC357F9002E7CE8 /* XMPPTransports.m in Sources */,
