@@ -11,13 +11,6 @@
 
 @interface WCXMPPTool () <XMPPStreamDelegate> {
     
-    // 与服务器交互的核心类
-    XMPPStream *_xmppStream;
-    
-    // 电子名片的头像模块
-    XMPPvCardAvatarModule *_avatar;
-  
-    
     // 结果回调Block
     XMPPResultBlock _resultBlock;
 }

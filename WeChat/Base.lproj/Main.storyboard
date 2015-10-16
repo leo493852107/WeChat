@@ -93,11 +93,76 @@
                             <outlet property="delegate" destination="wfN-Je-40y" id="uh6-z8-pWU"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="通讯录" id="sLC-29-C2R"/>
+                    <navigationItem key="navigationItem" title="通讯录" id="sLC-29-C2R">
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="TsL-p5-7Bh">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="contactAdd" lineBreakMode="middleTruncation" id="oZx-rZ-JQk">
+                                <rect key="frame" x="558" y="11" width="22" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <segue destination="83O-1Z-kbA" kind="show" id="arw-mI-PhE"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HEO-Wo-HOM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1293" y="458"/>
+        </scene>
+        <!--添加好友-->
+        <scene sceneID="Kuy-j5-ouC">
+            <objects>
+                <tableViewController id="83O-1Z-kbA" customClass="WCAddContactTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="NNi-LS-grg">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <sections>
+                            <tableViewSection id="laa-in-8aK">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="44" id="UB9-Sj-NJ2">
+                                        <rect key="frame" x="0.0" y="99" width="600" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="UB9-Sj-NJ2" id="yRq-hL-TwA">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="请输入用户名" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="K2M-cj-deN">
+                                                    <rect key="frame" x="13" y="7" width="579" height="30"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                </textField>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="K2M-cj-deN" secondAttribute="bottom" id="9ER-Ux-MEr"/>
+                                                <constraint firstItem="K2M-cj-deN" firstAttribute="top" secondItem="yRq-hL-TwA" secondAttribute="top" id="HEc-LF-8WW"/>
+                                                <constraint firstItem="K2M-cj-deN" firstAttribute="leading" secondItem="yRq-hL-TwA" secondAttribute="leading" constant="13" id="V6X-v8-AeM"/>
+                                                <constraint firstAttribute="trailing" secondItem="K2M-cj-deN" secondAttribute="trailing" constant="8" id="gCZ-jS-Syk"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="83O-1Z-kbA" id="hqN-2i-fmy"/>
+                            <outlet property="delegate" destination="83O-1Z-kbA" id="6AP-IG-DJq"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="添加好友" id="Ejd-gn-BrR">
+                        <barButtonItem key="rightBarButtonItem" title="添加" id="HZE-SI-EyY">
+                            <connections>
+                                <action selector="addContactBtnClick:" destination="83O-1Z-kbA" id="gLr-GJ-BiC"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="textField" destination="K2M-cj-deN" id="N9R-Ud-2Qj"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="34s-W0-BuJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1938" y="458"/>
         </scene>
         <!--Root View Controller-->
         <scene sceneID="gu3-6b-aeV">

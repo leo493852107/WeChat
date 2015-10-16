@@ -171,6 +171,7 @@
 		B3CE3CF91BCE2454007CAF12 /* WCProfileTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B3CE3CF81BCE2454007CAF12 /* WCProfileTableViewController.m */; settings = {ASSET_TAGS = (); }; };
 		B3CE3CFC1BCF8DE4007CAF12 /* WCEditVCardTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B3CE3CFB1BCF8DE4007CAF12 /* WCEditVCardTableViewController.m */; settings = {ASSET_TAGS = (); }; };
 		B3CE3D041BCFEFE7007CAF12 /* WCContactTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B3CE3D031BCFEFE7007CAF12 /* WCContactTableViewController.m */; settings = {ASSET_TAGS = (); }; };
+		B3CE3D071BD0902C007CAF12 /* WCAddContactTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B3CE3D061BD0902C007CAF12 /* WCAddContactTableViewController.m */; settings = {ASSET_TAGS = (); }; };
 		B3EC886E1BCA4BAA0043B6E1 /* UIButton+WF.m in Sources */ = {isa = PBXBuildFile; fileRef = B3EC88631BCA4BAA0043B6E1 /* UIButton+WF.m */; settings = {ASSET_TAGS = (); }; };
 		B3EC886F1BCA4BAA0043B6E1 /* UIImage+WF.m in Sources */ = {isa = PBXBuildFile; fileRef = B3EC88651BCA4BAA0043B6E1 /* UIImage+WF.m */; settings = {ASSET_TAGS = (); }; };
 		B3EC88701BCA4BAA0043B6E1 /* UIScreen+WF.m in Sources */ = {isa = PBXBuildFile; fileRef = B3EC88671BCA4BAA0043B6E1 /* UIScreen+WF.m */; settings = {ASSET_TAGS = (); }; };
@@ -534,6 +535,8 @@
 		B3CE3CFB1BCF8DE4007CAF12 /* WCEditVCardTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WCEditVCardTableViewController.m; sourceTree = "<group>"; };
 		B3CE3D021BCFEFE7007CAF12 /* WCContactTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WCContactTableViewController.h; sourceTree = "<group>"; };
 		B3CE3D031BCFEFE7007CAF12 /* WCContactTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WCContactTableViewController.m; sourceTree = "<group>"; };
+		B3CE3D051BD0902C007CAF12 /* WCAddContactTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WCAddContactTableViewController.h; sourceTree = "<group>"; };
+		B3CE3D061BD0902C007CAF12 /* WCAddContactTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WCAddContactTableViewController.m; sourceTree = "<group>"; };
 		B3EC88611BCA4BAA0043B6E1 /* CategoryWF.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategoryWF.h; sourceTree = "<group>"; };
 		B3EC88621BCA4BAA0043B6E1 /* UIButton+WF.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+WF.h"; sourceTree = "<group>"; };
 		B3EC88631BCA4BAA0043B6E1 /* UIButton+WF.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+WF.m"; sourceTree = "<group>"; };
@@ -1647,6 +1650,8 @@
 			children = (
 				B3CE3D021BCFEFE7007CAF12 /* WCContactTableViewController.h */,
 				B3CE3D031BCFEFE7007CAF12 /* WCContactTableViewController.m */,
+				B3CE3D051BD0902C007CAF12 /* WCAddContactTableViewController.h */,
+				B3CE3D061BD0902C007CAF12 /* WCAddContactTableViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -1819,6 +1824,7 @@
 				B38996E71BC357F9002E7CE8 /* XMPPDateTimeProfiles.m in Sources */,
 				B38995221BC35619002E7CE8 /* DDLog.m in Sources */,
 				B389970A1BC357F9002E7CE8 /* NSXMLElement+XEP_0297.m in Sources */,
+				B3CE3D071BD0902C007CAF12 /* WCAddContactTableViewController.m in Sources */,
 				B38996B61BC357F9002E7CE8 /* XMPPRosterCoreDataStorage.m in Sources */,
 				B38996F51BC357F9002E7CE8 /* XMPPMessageArchiving.m in Sources */,
 				B38996E61BC357F9002E7CE8 /* NSDate+XMPPDateTimeProfiles.m in Sources */,
