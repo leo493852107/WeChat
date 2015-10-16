@@ -16,11 +16,7 @@
     
     // 电子名片的头像模块
     XMPPvCardAvatarModule *_avatar;
-    
-    // 花名册
-    XMPPRoster *_roster;
-    // 花名册数据存储
-    XMPPRosterCoreDataStorage *_rosterStorage;
+  
     
     // 结果回调Block
     XMPPResultBlock _resultBlock;

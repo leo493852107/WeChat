@@ -54,21 +54,37 @@
             </objects>
             <point key="canvasLocation" x="1293" y="-322"/>
         </scene>
-        <!--Root View Controller-->
+        <!--通讯录-->
         <scene sceneID="ESh-Ht-B0U">
             <objects>
-                <tableViewController id="wfN-Je-40y" sceneMemberID="viewController">
+                <tableViewController id="wfN-Je-40y" customClass="WCContactTableViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="m9D-WI-xjo">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="fvL-li-55I">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ContactCell" textLabel="Mkn-Y7-Si0" detailTextLabel="eb6-PW-jZW" style="IBUITableViewCellStyleValue1" id="fvL-li-55I">
                                 <rect key="frame" x="0.0" y="92" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="fvL-li-55I" id="z12-oX-pd4">
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Mkn-Y7-Si0">
+                                            <rect key="frame" x="15" y="12" width="31.5" height="19.5"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Detail" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="eb6-PW-jZW">
+                                            <rect key="frame" x="543.5" y="12" width="41.5" height="19.5"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <color key="textColor" red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
                                 </tableViewCellContentView>
                             </tableViewCell>
                         </prototypes>
@@ -77,7 +93,7 @@
                             <outlet property="delegate" destination="wfN-Je-40y" id="uh6-z8-pWU"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="sLC-29-C2R"/>
+                    <navigationItem key="navigationItem" title="通讯录" id="sLC-29-C2R"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HEO-Wo-HOM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -494,11 +510,11 @@
             </objects>
             <point key="canvasLocation" x="473" y="1202"/>
         </scene>
-        <!--Item-->
+        <!--通讯录-->
         <scene sceneID="BDm-p8-2X9">
             <objects>
                 <navigationController id="Ixp-sp-yzc" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="Zse-E9-KtZ"/>
+                    <tabBarItem key="tabBarItem" title="通讯录" id="Zse-E9-KtZ"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="zAD-pM-tEI">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>

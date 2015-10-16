@@ -170,6 +170,7 @@
 		B3CE3CF51BCB98A5007CAF12 /* WCXMPPTool.m in Sources */ = {isa = PBXBuildFile; fileRef = B3CE3CF41BCB98A5007CAF12 /* WCXMPPTool.m */; settings = {ASSET_TAGS = (); }; };
 		B3CE3CF91BCE2454007CAF12 /* WCProfileTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B3CE3CF81BCE2454007CAF12 /* WCProfileTableViewController.m */; settings = {ASSET_TAGS = (); }; };
 		B3CE3CFC1BCF8DE4007CAF12 /* WCEditVCardTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B3CE3CFB1BCF8DE4007CAF12 /* WCEditVCardTableViewController.m */; settings = {ASSET_TAGS = (); }; };
+		B3CE3D041BCFEFE7007CAF12 /* WCContactTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B3CE3D031BCFEFE7007CAF12 /* WCContactTableViewController.m */; settings = {ASSET_TAGS = (); }; };
 		B3EC886E1BCA4BAA0043B6E1 /* UIButton+WF.m in Sources */ = {isa = PBXBuildFile; fileRef = B3EC88631BCA4BAA0043B6E1 /* UIButton+WF.m */; settings = {ASSET_TAGS = (); }; };
 		B3EC886F1BCA4BAA0043B6E1 /* UIImage+WF.m in Sources */ = {isa = PBXBuildFile; fileRef = B3EC88651BCA4BAA0043B6E1 /* UIImage+WF.m */; settings = {ASSET_TAGS = (); }; };
 		B3EC88701BCA4BAA0043B6E1 /* UIScreen+WF.m in Sources */ = {isa = PBXBuildFile; fileRef = B3EC88671BCA4BAA0043B6E1 /* UIScreen+WF.m */; settings = {ASSET_TAGS = (); }; };
@@ -531,6 +532,8 @@
 		B3CE3CF81BCE2454007CAF12 /* WCProfileTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WCProfileTableViewController.m; sourceTree = "<group>"; };
 		B3CE3CFA1BCF8DE4007CAF12 /* WCEditVCardTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WCEditVCardTableViewController.h; sourceTree = "<group>"; };
 		B3CE3CFB1BCF8DE4007CAF12 /* WCEditVCardTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WCEditVCardTableViewController.m; sourceTree = "<group>"; };
+		B3CE3D021BCFEFE7007CAF12 /* WCContactTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WCContactTableViewController.h; sourceTree = "<group>"; };
+		B3CE3D031BCFEFE7007CAF12 /* WCContactTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WCContactTableViewController.m; sourceTree = "<group>"; };
 		B3EC88611BCA4BAA0043B6E1 /* CategoryWF.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategoryWF.h; sourceTree = "<group>"; };
 		B3EC88621BCA4BAA0043B6E1 /* UIButton+WF.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+WF.h"; sourceTree = "<group>"; };
 		B3EC88631BCA4BAA0043B6E1 /* UIButton+WF.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+WF.m"; sourceTree = "<group>"; };
@@ -640,6 +643,7 @@
 		B38995071BC353D5002E7CE8 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				B3CE3CFD1BCFEC7B007CAF12 /* Contacts */,
 				B3C68F9D1BC7E94D003BA1D0 /* Profile */,
 				B3C87EE01BC3717300BA173C /* Main */,
 				B3C87EDF1BC3716D00BA173C /* Login */,
@@ -1630,6 +1634,23 @@
 			name = Tool;
 			sourceTree = "<group>";
 		};
+		B3CE3CFD1BCFEC7B007CAF12 /* Contacts */ = {
+			isa = PBXGroup;
+			children = (
+				B3CE3CFE1BCFEC95007CAF12 /* Controller */,
+			);
+			name = Contacts;
+			sourceTree = "<group>";
+		};
+		B3CE3CFE1BCFEC95007CAF12 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				B3CE3D021BCFEFE7007CAF12 /* WCContactTableViewController.h */,
+				B3CE3D031BCFEFE7007CAF12 /* WCContactTableViewController.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
 		B3EC88601BCA4BAA0043B6E1 /* Category */ = {
 			isa = PBXGroup;
 			children = (
@@ -1880,6 +1901,7 @@
 				B38996D31BC357F9002E7CE8 /* XMPPvCardCoreDataStorage.m in Sources */,
 				B38996E21BC357F9002E7CE8 /* TURNSocket.m in Sources */,
 				B38996B91BC357F9002E7CE8 /* XMPPRosterMemoryStorage.m in Sources */,
+				B3CE3D041BCFEFE7007CAF12 /* WCContactTableViewController.m in Sources */,
 				B389951F1BC35619002E7CE8 /* DDAbstractDatabaseLogger.m in Sources */,
 				B38996C81BC357F9002E7CE8 /* XMPPRoomHybridStorage.m in Sources */,
 				B38996C91BC357F9002E7CE8 /* XMPPRoomMessageHybridCoreDataStorageObject.m in Sources */,

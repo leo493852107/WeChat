@@ -31,6 +31,11 @@ singleton_interface(WCXMPPTool)
 // 电子名片数据存储
 @property (nonatomic, strong, readonly) XMPPvCardCoreDataStorage *vCardStorage;
 
+// 花名册
+@property (nonatomic, strong, readonly) XMPPRoster *roster;
+// 花名册数据存储
+@property (nonatomic, strong, readonly) XMPPRosterCoreDataStorage *rosterStorage;
+
 /**
  *  标识连接服务器是"登录"连接,还是"注册"连接
  *  NO --> 登录操作
