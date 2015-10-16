@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B304991D1BD0D029005DFBE0 /* WCChatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B304991C1BD0D029005DFBE0 /* WCChatViewController.m */; settings = {ASSET_TAGS = (); }; };
 		B38994D61BC353A5002E7CE8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B38994D51BC353A5002E7CE8 /* main.m */; };
 		B38994D91BC353A5002E7CE8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B38994D81BC353A5002E7CE8 /* AppDelegate.m */; };
 		B38994DC1BC353A5002E7CE8 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B38994DB1BC353A5002E7CE8 /* ViewController.m */; };
@@ -198,6 +199,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B304991B1BD0D029005DFBE0 /* WCChatViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WCChatViewController.h; sourceTree = "<group>"; };
+		B304991C1BD0D029005DFBE0 /* WCChatViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WCChatViewController.m; sourceTree = "<group>"; };
 		B38994D11BC353A5002E7CE8 /* WeChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B38994D51BC353A5002E7CE8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		B38994D71BC353A5002E7CE8 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -670,7 +673,7 @@
 			isa = PBXGroup;
 			children = (
 				B389970E1BC3581A002E7CE8 /* XMPPFramework.h */,
-				B38995AA1BC357F9002E7CE8 /* Extensions */,
+				B38995AA1BC357F9002E7CE8 /* Extensions[拓展协议] */,
 				B38995461BC35796002E7CE8 /* Authentication */,
 				B38995611BC35796002E7CE8 /* Categories */,
 				B38995681BC35796002E7CE8 /* Core */,
@@ -928,7 +931,7 @@
 			path = Utilities;
 			sourceTree = "<group>";
 		};
-		B38995AA1BC357F9002E7CE8 /* Extensions */ = {
+		B38995AA1BC357F9002E7CE8 /* Extensions[拓展协议] */ = {
 			isa = PBXGroup;
 			children = (
 				B38995AB1BC357F9002E7CE8 /* BandwidthMonitor */,
@@ -955,7 +958,7 @@
 				B389964C1BC357F9002E7CE8 /* XEP-0100 */,
 				B389964F1BC357F9002E7CE8 /* XEP-0106 */,
 				B38996521BC357F9002E7CE8 /* XEP-0115 */,
-				B389965D1BC357F9002E7CE8 /* XEP-0136 */,
+				B389965D1BC357F9002E7CE8 /* XEP-0136(消息模块) */,
 				B38996691BC357F9002E7CE8 /* XEP-0147 */,
 				B389966C1BC357F9002E7CE8 /* XEP-0153 */,
 				B389966F1BC357F9002E7CE8 /* XEP-0172 */,
@@ -973,6 +976,7 @@
 				B38996A51BC357F9002E7CE8 /* XEP-0333 */,
 				B38996A81BC357F9002E7CE8 /* XEP-0335 */,
 			);
+			name = "Extensions[拓展协议]";
 			path = Extensions;
 			sourceTree = "<group>";
 		};
@@ -1346,13 +1350,14 @@
 			path = CoreDataStorage;
 			sourceTree = "<group>";
 		};
-		B389965D1BC357F9002E7CE8 /* XEP-0136 */ = {
+		B389965D1BC357F9002E7CE8 /* XEP-0136(消息模块) */ = {
 			isa = PBXGroup;
 			children = (
 				B389965E1BC357F9002E7CE8 /* CoreDataStorage */,
 				B38996671BC357F9002E7CE8 /* XMPPMessageArchiving.h */,
 				B38996681BC357F9002E7CE8 /* XMPPMessageArchiving.m */,
 			);
+			name = "XEP-0136(消息模块)";
 			path = "XEP-0136";
 			sourceTree = "<group>";
 		};
@@ -1652,6 +1657,8 @@
 				B3CE3D031BCFEFE7007CAF12 /* WCContactTableViewController.m */,
 				B3CE3D051BD0902C007CAF12 /* WCAddContactTableViewController.h */,
 				B3CE3D061BD0902C007CAF12 /* WCAddContactTableViewController.m */,
+				B304991B1BD0D029005DFBE0 /* WCChatViewController.h */,
+				B304991C1BD0D029005DFBE0 /* WCChatViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -1856,6 +1863,7 @@
 				B38996EE1BC357F9002E7CE8 /* XMPPCapsCoreDataStorageObject.m in Sources */,
 				B3C68F971BC69299003BA1D0 /* MBProgressHUD.m in Sources */,
 				B38997021BC357F9002E7CE8 /* XMPPAutoTime.m in Sources */,
+				B304991D1BD0D029005DFBE0 /* WCChatViewController.m in Sources */,
 				B3EC88701BCA4BAA0043B6E1 /* UIScreen+WF.m in Sources */,
 				B38996DA1BC357F9002E7CE8 /* XMPPvCardTempEmail.m in Sources */,
 				B38996E31BC357F9002E7CE8 /* XMPPIQ+XEP_0066.m in Sources */,
