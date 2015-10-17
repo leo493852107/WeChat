@@ -11,6 +11,9 @@
 
 @interface WCXMPPTool () <XMPPStreamDelegate> {
     
+    // 自动连接模块,由于网络问题，与服务器断开，它会自动连接服务器
+    XMPPReconnect *_reconnect;
+    
     // 结果回调Block
     XMPPResultBlock _resultBlock;
 }
@@ -84,6 +87,9 @@ singleton_implementation(WCXMPPTool)
     _msgArchiving = [[XMPPMessageArchiving alloc]initWithMessageArchivingStorage:_msgArchivingStorage];
     [_msgArchiving activate:_xmppStream];
     
+    // 5.添加“自动连接”模块
+    _reconnect = [[XMPPReconnect alloc]init];
+    [_reconnect activate:_xmppStream];
     
     // 设置代理 -
 //#warning    所有的代理方法都将在子线程被调用
@@ -99,11 +105,13 @@ singleton_implementation(WCXMPPTool)
     [_vCard deactivate];
     [_roster deactivate];
     [_msgArchiving deactivate];
+    [_reconnect deactivate];
     
     // 断开连接
     [_xmppStream disconnect];
     
     // 清空资源
+    _reconnect = nil;
     _msgArchiving = nil;
     _msgArchivingStorage = nil;
     _roster = nil;

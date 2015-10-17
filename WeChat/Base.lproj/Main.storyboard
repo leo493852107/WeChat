@@ -189,13 +189,20 @@
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" returnKeyType="send" enablesReturnKeyAutomatically="YES"/>
-                                        <connections>
-                                            <outlet property="delegate" destination="hA9-Zy-Tk1" id="qid-Fl-C98"/>
-                                        </connections>
                                     </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fXb-mV-LKM">
+                                        <rect key="frame" x="536" y="4" width="35" height="35"/>
+                                        <state key="normal" image="TypeSelectorBtn_Black"/>
+                                        <connections>
+                                            <action selector="imgChooseBtnClick:" destination="hA9-Zy-Tk1" eventType="touchUpInside" id="Vdf-rf-11X"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="fXb-mV-LKM" secondAttribute="trailing" constant="29" id="2Wx-OL-2hO"/>
+                                    <constraint firstItem="fXb-mV-LKM" firstAttribute="top" secondItem="ZIs-82-wjc" secondAttribute="top" constant="4" id="4Fs-He-mZt"/>
+                                    <constraint firstAttribute="bottom" secondItem="fXb-mV-LKM" secondAttribute="bottom" constant="5" id="P0z-Qf-Adz"/>
                                     <constraint firstAttribute="trailing" secondItem="GZV-ku-I9a" secondAttribute="trailing" constant="72" id="chJ-nx-kQr"/>
                                     <constraint firstAttribute="height" constant="44" id="dCY-cv-nb3"/>
                                     <constraint firstItem="GZV-ku-I9a" firstAttribute="leading" secondItem="ZIs-82-wjc" secondAttribute="leading" constant="73" id="eWh-af-V3z"/>
@@ -688,4 +695,7 @@
             <point key="canvasLocation" x="473" y="-325"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="TypeSelectorBtn_Black" width="35" height="35"/>
+    </resources>
 </document>
